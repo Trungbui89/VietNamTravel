@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Dancing+Script:wght@700&family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/mainStyle.css">
     <link rel="stylesheet" href="./assets/css/reponsive.css">
@@ -15,30 +16,46 @@
 <body>
     <div id="wrapper">
         <header>
-            <a href="#" class="brand" title="Du lịch Việt Nam">VN-Travel</a>
-            <div class="nav-button">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </div>
-            <nav>
+            <a href="#" class="brand">VN-Travel</a>
+                <div class="nav-btn">
+                    <div class="nav-btn-content"></div>
+                </div>
+            <nav id="nav">
                 <div class="nav-items">
                     <a href="#">Home</a>
                     <a href="#">Du Lịch</a>
                     <a href="#">Văn Hóa</a>
                     <a href="#">Ẩm Thực</a>
                     <a href="#">Con Người</a>
-                    <a href="#">Tin Tức</a>
+                    <a href="#" id="last">Tin Tức</a>
+                    <img id="nav-logo" src="./assets/image/homePage/Viet Nam ve dep bat tan.svg" alt="">
                 </div>
             </nav>
         </header>
     
         <section class="home">
-            <video autoplay loop muted>
+            <video autoplay loop muted class="slide-video active">
                 <source src="./assets/video/home-page/du-lich.mp4">
             </video>
+            <video autoplay loop muted class="slide-video">
+                <source src="./assets/video/home-page/van-hoa.mp4">
+            </video>
+            <video autoplay loop muted class="slide-video">
+                <source src="./assets/video/home-page/am-thuc.mp4">
+            </video>
+            <video autoplay loop muted class="slide-video">
+                <source src="./assets/video/home-page/con-nguoi.mp4">
+            </video>
             <div class="content">
-                <h1>Du Lịch <br><span>Việt Nam</span></h1>
-                <p>Việt Nam điểm đến mới của thế giớ sẽ không làm bạn thất vọng. Với bề dày lịch sử của mình, Việt Nam ẩn chứ trong mình một nền văn hóa vô cùng phong phú hòa quện cùng nền ẩm thực hấp dẫn đến mê người.</p>
-                <a href="#">Tìm hiểu thêm</a>
+                <h1 class="title active">Du Lịch<br><span>Việt Nam</span></h1>
+                <h1 class="title">Văn Hóa<br><span>Việt Nam</span></h1>
+                <h1 class="title">Ẩm Thực<br><span>Việt Nam</span></h1>
+                <h1 class="title">Con Người<br><span>Việt Nam</span></h1>
+                <p>Việt Nam điểm đến mới của thế giới sẽ không làm bạn thất vọng. <span>Với bề dày lịch sử của mình, Việt Nam ẩn chứa trong mình một nền văn hóa vô cùng phong phú hòa quện cùng nền ẩm thực hấp dẫn đến mê người.</span></p>
+                <a href="#" class="title-link active">Tìm hiểu thêm</a>
+                <a href="#" class="title-link">Tìm hiểu thêm</a>
+                <a href="#" class="title-link">Tìm hiểu thêm</a>
+                <a href="#" class="title-link">Tìm hiểu thêm</a>
             </div>
             <div class="social-icons">
                 <a href="https://www.facebook.com/trung.bui.79025/">                
@@ -57,7 +74,14 @@
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
             </div>
+            <div id="slide-nav">
+                <div class="slide-btn active"></div>
+                <div class="slide-btn"></div>
+                <div class="slide-btn"></div>
+                <div class="slide-btn"></div>
+            </div>
         </section>
     </div>
 </body>
+<script src="./assets/script/mainJs.js"></script>
 </html>
