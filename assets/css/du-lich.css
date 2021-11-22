@@ -464,7 +464,7 @@ section {
     width: 70%;
     position: relative;
     transform: skew(13.3deg, -13.3deg);
-    padding-bottom: 64px;
+    margin-bottom: 64px;
 }
 
 .hn-old-img-1 img:first-child{
@@ -474,11 +474,16 @@ section {
 }
 
 .hn-old-img-1 img:last-child{
-    width: 72%;
+    width: 69%;
     position: absolute;
     left: 6%;
     top: 8%;
     z-index: 1;
+    transition: all ease-in-out 1s;
+}
+
+.hn-old-img-1:hover img:last-child {
+    transform: scale(1.1);
 }
 
 .hn-sect-titl {
@@ -536,25 +541,25 @@ section {
 } */
 
 .hn-old-social img:nth-child(1) { 
-    right: 7%;
+    right: 14%;
     transform: rotate(-15deg);
 }
 
 .hn-old-social img:nth-child(2) { 
-    right: -7%;
-    top: 670px;
+    right: 1%;
+    top: 650px;
     transform: rotate(30deg);
 }
 
 .hn-old-social img:nth-child(3) { 
-    right: 9%;
+    right: 15%;
     top: 745px;
     transform: rotate(-13deg);
 }
 
 .hn-old-social img:nth-child(4) { 
-    right: -4%;
-    top: 865px;
+    right: 0.8%;
+    top: 827px;
     transform: rotate(6deg);
 }
 
@@ -567,8 +572,22 @@ section {
     z-index: 99;
 }
 
+.haNoi-old .change-sect-img {
+    width: 100%;
+    z-index: 16;
+}
 
+.haNoi-old .change-sect-img img{
+    width: 100%;
+    transform: translateY(100%);
+}
 
+/* hanoi new */
+
+.haNoi-new {
+    padding-top: 164px;
+    background-color: #fff;
+}
 
 
 
