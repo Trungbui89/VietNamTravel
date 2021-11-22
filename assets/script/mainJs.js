@@ -4,7 +4,6 @@ const menuBar = document.getElementById("nav")
 const brand = document.querySelector(".brand")
 const navItems = document.querySelectorAll("header nav .nav-items a")
 let menuOpen = false
-let itemValue = 0.5
 
 menuBtn.addEventListener("click", () => {
     if(!menuOpen) {

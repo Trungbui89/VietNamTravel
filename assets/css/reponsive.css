@@ -1,4 +1,4 @@
-@media only screen and (max-width:739px){
+@media only screen and (max-width:767px){
     header .nav-btn {
         display: block;
     }
@@ -203,7 +203,7 @@
 
 /* for tablet and low resolution pc */
 
-@media only screen and (min-width:740px) and (max-width: 993px) {
+@media only screen and (min-width:768px) and (max-width: 993px) {
     header {
         padding: 15px 7% 85px;
     }
@@ -341,6 +341,10 @@
     header {
         padding: 25px 12% 85px;
         z-index: 6;
+    }
+
+    .home::before {
+        z-index: 5;
     }
 
     header .brand {
