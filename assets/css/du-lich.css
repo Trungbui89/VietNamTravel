@@ -52,8 +52,18 @@
 }
 
 @font-face {
-    font-family: 'aturdida';
+    font-family: 'brankovic';
     src: url('../fonts/Brankovic.ttf');
+}
+
+@font-face {
+    font-family: "Celestia";
+    src: url('../fonts/Celestia.otf');
+}
+
+@font-face {
+    font-family: 'aturdida';
+    src: url('../fonts/ATURDIDA.ttf');
 }
 
 .pin {
@@ -67,6 +77,7 @@
     animation-name: bounce;
     animation-fill-mode: both;
     animation-duration: 1s;
+    transition: ease-in-out 1s;
 }
 .pin:after {
     content: '';
@@ -85,6 +96,7 @@
     position: absolute;
     margin: 11px 0px 0px -12px;
     transform: rotateX(55deg);
+    transition: ease-in-out 1s;
 }
 
 .pulse:after {
@@ -103,6 +115,15 @@
 }
 
 /* location mark */
+
+.location-icon { 
+    transition: all ease 1s;
+}
+
+.location-icon:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
 
 .location-icon.an-giang {
     position: absolute;
@@ -215,6 +236,66 @@ section {
     padding: 8% 5% 0;
 }
 
+.main-btn {
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 0;
+    transition: ease-in-out 1s;
+    
+}
+
+.main-btn-content {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);   
+    transition: all .5s ease-in-out;
+}
+
+.main-btn-content.active {   
+    background: transparent;
+    width: 42px;
+    height: 5px;
+}
+
+.main-btn-content::before,
+.main-btn-content::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        transition: all .5s ease-in-out;
+    }
+
+.main-btn-content::before {
+        transform: translateY(-12px);
+    }
+
+.main-btn-content::after {
+        transform: translateY(12px);
+    }
+
+    .main-btn-content.active::before {
+        transform: rotate(45deg);
+        width: 42px;
+        height: 5px;
+    }
+
+.main-btn-content.active::after {
+        transform: rotate(-45deg);
+        width: 42px;
+        height: 5px;
+    }
+
 /* map */
 
 .map {
@@ -237,7 +318,7 @@ section {
 
 #main > p.where {
     position: absolute;
-    top: 20%;
+    top: 390px;
     left: 65%;
     color: #fff;
     font-size: 32px;
@@ -249,7 +330,7 @@ section {
 
 #main > p.where-2 {
     position: absolute;
-    top: 21.5%;
+    top: 399px;
     left: 58%;
     color: #fff;
     font-size: 62px;
@@ -261,43 +342,47 @@ section {
 
 /* location-content */
 
-.location-content {
+.location-title {
     position: relative;
-    z-index: 12;
-    width: 90%;
-    margin-top: 125px;
-    left: auto;
-    right: auto;
-    background-color: #fff;
-    background-size: contain;
-    border-radius: 5px;
-}
-
-.location-content > .title {
-    position: relative;
-    padding: 24px 80px;
-    left: 50%;
     transform: translateX(-50%);
-    top: -90px;
-    background-color: #fff;
     border-radius: 5px;
-    width: 60%;
-    background: url("../image/duLichPage/retro-text-bg.png") center/cover;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    z-index: 9;
+    background: url(../image/duLichPage/retro-text-bg.png) center/cover;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 5px 0;
+    width: 9%; 
+    left: 28.1%; 
+    top: 151px;
+    transition: ease-in-out 1s;
 }
 
-.location-content .title p {
+.location-title p {
     font-family: 'Bungee Shade', cursive;
-    font-size: 90px;
+    font-size: 12px;
     line-height: 1.2;
     text-align: center;
     color: #e9e9e9;
+    transition: ease-in-out 1s;
+}
+
+.location-content {
+    position: relative;
+    z-index: 12;
+    left: 0;
+    background-color: #fff;
+    background-size: contain;
+    border-radius: 5px;
+    transition: all ease-in-out 1s;
+    height: auto; 
+    width: 0; 
+    overflow: hidden;
 }
 
 .location-content .content {
     width: 100%;
     height: auto;
+    padding-top: 180px;
 }
 
 .content-slogan {
@@ -401,7 +486,7 @@ section {
     position: absolute;
     font-size: 45px;
     color: #fff;
-    top: calc(-34px - 1%);
+    top: -57px;
     width: 100%;
 }
 
@@ -495,7 +580,7 @@ section {
 
 .hn-sect-titl h1 {
     display: block;
-    font-family: 'aturdida', sans-serif;
+    font-family: 'brankovic', sans-serif;
     font-size: 64px;
     color: #eef0ee;
     text-shadow: 1px 1px 5px rgba(97, 62, 62, 0.65);
@@ -507,7 +592,7 @@ section {
 
 .hn-sect-titl > p:nth-child(2),
 .hn-sect-titl > p:nth-child(3) {
-    font-family: 'aturdida', sans-serif;
+    font-family: 'brankovic', sans-serif;
     color: #faf3e1;
     transform: rotate(-13.3deg);
     font-size: 28px;
@@ -534,15 +619,10 @@ section {
     transition: all ease-in-out .3s;
 }
 
-/* .hn-old-social img:hover { 
-    transform: rotate(0deg);
-    transform: scale3D(1.1, 1.1, 1.1);
-    transition: all ease-in-out .3s;
-} */
-
 .hn-old-social img:nth-child(1) { 
     right: 14%;
     transform: rotate(-15deg);
+    top: 560px;
 }
 
 .hn-old-social img:nth-child(2) { 
@@ -589,10 +669,414 @@ section {
     background-color: #fff;
 }
 
+.haNoi-new > p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 38px;
+    text-shadow: 0 0 1px rgb(61, 61, 61);
+    color: #3b3b3b;
+}
 
+.hn-new-title {
+    width: 85%;
+    margin: 60px auto 0;
+    padding-bottom: 32px;
+}
 
+.hn-new-title img{
+    width: 100%;
+}
 
+/* bao tang hn */
 
+.hn-new-content .anh-chuyen {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.hn-new-content .anh-chuyen img {
+    max-width: 100%;
+    display: block;
+}
+
+.bao-tang-hn-container {
+    padding-top: 120px;
+    background-color: #3b3b3b;
+}
+
+.btHn-cont-background {
+    width: 100%;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+}
+
+.btHn-cont-background > img {
+    position: absolute;
+    width: 100%;
+    transition: all ease-in-out 1s;   
+    left: 0%;
+    top: 20.2%;
+}
+
+.btHn-cont-background .inline {
+    position: absolute;
+    height: 350px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    transition: all ease-in-out 1s;
+}
+
+.btHn-cont-background .inline img {
+    position: relative;
+    width: 100%;
+    top: -1%;
+    transition: all ease-in-out 1s;
+}
+
+.btHn-cont-background:hover > img {
+    left: 0%;
+    top: -5.9%;
+    width: 120%;
+    transition: all ease-in-out 1s;
+
+}
+
+.btHn-cont-background:hover .inline img {
+    position: relative;
+    width: 120%;
+    top: -210px;
+}
+
+.btHn-cont-background:hover .inline {
+    height: 250px;
+}
+
+.btHn-cont-background > p:nth-child(1){
+    font-family: 'aturdida', sans-serif;
+    position: absolute;
+    color: #f2eed8;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px #000;
+    font-size: 105px;
+    transition: all ease-in-out 1.2s;
+    left: 5%;
+    bottom: 225px;
+}
+
+.btHn-cont-background:hover > p:nth-child(1) {
+    bottom: 435px;
+    left: 5%;
+}
+
+/* bao tang ha noi infomation */
+
+.btHn-cont-info {
+    bottom: 125px;
+    left: -50%;
+    padding: 32px;
+    border-radius: 5px;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    background-color: rgba(242, 185, 12, 0.1);
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, 
+                rgb(0 0 0 / 12%) 0px -12px 30px, 
+                rgb(0 0 0 / 12%) 0px 4px 6px, 
+                rgb(0 0 0 / 17%) 0px 12px 13px, 
+                rgb(0 0 0 / 9%) 0px -3px 5px;
+    transition: all ease 1.5s;
+}
+
+.btHn-cont-background:hover .btHn-cont-info {
+    bottom: 125px;
+    left: 5%;
+}
+
+.bao-tang-hn-container p {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    text-shadow: 1px 1x 5px rgba(0, 0, 0, 1);
+    margin: 24px 0;
+}
+
+.btHn-cont-info p {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.bao-tang-hn-text {
+    padding: 32px 55px;
+}
+
+.bao-tang-hn-text-night {
+    overflow: hidden;
+    padding: 0;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, 
+                rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 
+                rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.bao-tang-hn-text-night:hover img {
+    transform: scale(1.1);
+}
+
+.bao-tang-hn-text-night img {
+    transition: ease 1s;
+    width: 100%;
+    display: block;
+}
+
+.btHn-cont-content .row {
+    align-items: center;
+}
+
+.anh-chuyen-3 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.anh-chuyen-3 img{
+    width: 100%;
+}
+
+/* gallery */
+
+.tag-footer-title {
+    width: 100%;
+    text-align: center;
+    margin: 85px 0;
+}
+
+.tag-footer-title p {
+    font-size: 75px;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 2px 2px 15px #333;
+    margin-bottom: 120px;
+}
+
+.tag-footer-title span {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.tag-footer-gallery .row-col-1 {
+    box-shadow: rgb(0 0 0 / 38%) 0px 10px 60px;
+}
+
+.tag-footer-gallery div.col-1{
+    overflow: hidden;
+    height: 380px;
+    border: 1px solid #2f2f2f;
+    padding: 0;
+}
+
+.tag-footer-gallery .col-1 img{
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #1a1a1a;
+}
+
+footer > div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+footer .text {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .text div:first-child {
+    height: 120px;
+    background-color: #fff;
+    padding: 0 24px;
+}
+
+footer .text div:last-child {
+    height: 120px;
+    padding: 0 24px;
+}
+
+footer .text div.active {
+    text-shadow: #f46100 0 5px 38px,
+    #f46100 0 0px 28px;
+}
+
+footer h1 {
+    font-size: 55px;
+    font-family: 'Celestia';
+    display: block;
+    color: #2f2f2f;
+    line-height: 97px;
+}
+
+footer p{
+    font-family: 'Celestia';
+    display: block;
+    font-size: 55px;
+    line-height: 97px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: ease .6s;
+    z-index: 2;
+    position: relative;
+}
+
+footer p:hover {
+    text-shadow: #f46100 0 5px 38px,
+    #f46100 0 0px 28px;
+}
+
+.anh-nen-1 {
+    top: 31%;
+    right: 21%;
+    z-index: 1;
+}
+
+.anh-nen-1 img {
+    height: 100%;
+}
+
+.anh-nen-1 div {
+    width: 80%;
+    position: absolute;
+}
+
+.anh-nen-2 {
+    left: 23%;
+    top: 0;
+}
+
+.anh-nen-2 img {
+    width: 100%;
+}
+
+.anh-nen-2 .center,
+.anh-nen-1 .center {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    background-color: #1a1a1a;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* social icons */
+
+.social-icons {
+    z-index: 0;
+    right: 7.1%;
+    display: block;
+    top: -10.3%;
+    overflow: visible;
+}
+
+.social-icons a{
+    transition: ease .3s;
+}
+
+.social-icons a:nth-child(1) {
+    position: relative;
+    top: 250px;
+    left: -59.2%;
+    transition-delay: .15s;
+}
+.social-icons a:nth-child(2) {
+    position: relative;
+    top: 190px;
+    left: -59.2%;
+    transition-delay: .05s;
+}
+.social-icons a:nth-child(3) {
+    position: relative;
+    top: 127px;
+    left: -59.2%;
+}
+.social-icons a:nth-child(4) {
+    position: relative;
+    top: 65px;
+    left: -59.2%;
+    transition-delay: .1s;
+}
+.social-icons a:nth-child(5) {
+    position: relative;
+    top: 3px;
+    left: -59.2%;
+    transition-delay: .2s;
+}
+
+/* nt-89 active */
+
+.social-icons a.active:nth-child(1) {
+    top: 125px;
+    left: -59.2%;
+}
+
+.social-icons a.active:nth-child(2) {
+    top: 62px;
+    left: -60px;
+}
+
+.social-icons a.active:nth-child(3) {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.social-icons a.active:nth-child(4) {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.social-icons a.active:nth-child(5) {
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.social-icons a:nth-child(1):hover {
+    transform: translateY(-10px);
+}
+
+.social-icons a:nth-child(2):hover {
+    transform: translateY(-10px);
+}
+
+.social-icons a:nth-child(3):hover {
+    transform: translate(10px, -10px);
+}
+
+.social-icons a:hover {
+    transform: translateX(10px);
+}
 
 /* mobile responsive */
 

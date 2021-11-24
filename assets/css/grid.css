@@ -16,9 +16,22 @@
     flex-wrap: wrap;
 }
 
+.row-col-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1px;
+}
+
 .col {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.col-1 {
+    padding: 2px 1px;
 }
 
 /* mobile */
@@ -40,12 +53,12 @@
 
 /* tablet */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    /* .row {
-        margin: 0 -8px;
-    } */
+    .row {
+        margin: 0 -16px;
+    }
 
     .col {
-        padding: 0 15px;
+        padding: 0 8px;
     }
 
     .m-0 {display: none;}
@@ -68,7 +81,7 @@
 /* pc */
 @media only screen and (min-width: 993px) {
     .row {
-        margin: 0 -12px;
+        margin: 0 -24px;
     }
 
     .col {
