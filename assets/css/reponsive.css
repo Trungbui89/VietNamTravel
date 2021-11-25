@@ -235,7 +235,7 @@
     /* home */
     
     section {
-        padding: 15% 6%;
+        padding: 11% 6%;
     }
     
     .home {
@@ -276,9 +276,9 @@
 
     .home .content p{
         text-indent: 6%;
-        font-size: 21px;
+        font-size: 14px;
         margin-bottom: 12%;
-        margin-top: 15%;
+        margin-top: 8%;
         width: 120%;
         text-shadow: 0px 4px 10px rgba(0,0,0,.5),
              0px 12px 50px rgba(0,0,0,0.3),
@@ -374,7 +374,7 @@
     /* home */
     
     section {
-        padding: 15% 12% 0;
+        padding: 11% 12% 0;
     }
     
     .home {
@@ -414,7 +414,7 @@
 
     .home .content p{
         text-indent: none;
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 15%;
         margin-top: 15%;
         width: 120%;

@@ -25,18 +25,15 @@ const fontsize = document.querySelector(".location-title p")
 const content = document.querySelector(".location-content")
 const wrapper = document.getElementById('wrapper')
 const map = document.querySelector("#main .map img")
-let secOpen = false
+let secOpen = true
 
 activeAoe.addEventListener("click", () => {
-    var mapHeight = map.clientHeight;
     if(!secOpen) {
-        secOpen = true
-        btn.classList.add('active')     
-        content.style = "left:-150%;"
+        secOpen = true   
+        content.style = `left:0;`
     } else {
         secOpen = false
-        btn.classList.remove('active')
-        content.style = `left:0;`
+        content.style = "left:-150%;"
     }
 })
 
@@ -45,15 +42,12 @@ activeAoe.addEventListener("click", () => {
 const locSelector = document.querySelectorAll(".location .location-icon")
 
 function showLocation() {
-    var mapHeight = map.clientHeight;
     if(!secOpen) {
         secOpen = true
-        btn.classList.add('active')      
-        content.style = `left: -150%;`
-    } else {
-        secOpen = false
-        btn.classList.remove('active')
         content.style = `left:0;`
+    } else {
+        secOpen = false    
+        content.style = `left: -150%;`
     }
     return false
 }

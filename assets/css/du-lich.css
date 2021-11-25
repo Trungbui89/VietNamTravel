@@ -263,26 +263,27 @@ section {
 
 .main-btn-content {
     position: absolute;
-    width: 0;
-    height: 0;
     background-color: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%);   
-    transition: all .5s ease-in-out;
-}
-
-.main-btn-content.active {   
-    background: transparent;
+    transition: all .5s ease-in-out;  
     width: 42px;
     height: 5px;
+    background: transparent;
+}
+
+.main-btn-content.inactive {   
+    width: 0;
+    height: 0;
 }
 
 .main-btn-content::before,
 .main-btn-content::after {
         content: '';
         position: absolute;
-        width: 0;
-        height: 0;
+
+        width: 42px;
+        height: 5px;
         background-color: #fff;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
@@ -290,23 +291,26 @@ section {
     }
 
 .main-btn-content::before {
-        transform: translateY(-12px);
-    }
+    transform: rotate(45deg);
+}
 
 .main-btn-content::after {
+    transform: rotate(-45deg);
+}
+
+.main-btn-content.inactive::before {
+    transform: translateY(-12px);
+    width: 0;
+    height: 0;
+    transform: rotate(0);
+    
+}
+
+.main-btn-content.inactive::after {
         transform: translateY(12px);
-    }
-
-    .main-btn-content.active::before {
-        transform: rotate(45deg);
-        width: 42px;
-        height: 5px;
-    }
-
-.main-btn-content.active::after {
-        transform: rotate(-45deg);
-        width: 42px;
-        height: 5px;
+        width: 0;
+        height: 0;
+        transform: rotate(0);
     }
 
 /* map */
@@ -749,24 +753,6 @@ section {
     transition: all ease-in-out 1s;
 }
 
-.btHn-cont-background:hover > img {
-    left: 0%;
-    top: -5.9%;
-    width: 120%;
-    transition: all ease-in-out 1s;
-
-}
-
-.btHn-cont-background:hover .inline img {
-    position: relative;
-    width: 120%;
-    top: -210px;
-}
-
-.btHn-cont-background:hover .inline {
-    height: 250px;
-}
-
 .btHn-cont-background > p:nth-child(1){
     font-family: 'aturdida', sans-serif;
     position: absolute;
@@ -779,16 +765,11 @@ section {
     bottom: 225px;
 }
 
-.btHn-cont-background:hover > p:nth-child(1) {
-    bottom: 435px;
-    left: 5%;
-}
-
 /* bao tang ha noi infomation */
 
 .btHn-cont-info {
     bottom: 125px;
-    left: -50%;
+    left: -100%;
     padding: 32px;
     border-radius: 5px;
     position: absolute;
@@ -800,11 +781,6 @@ section {
                 rgb(0 0 0 / 17%) 0px 12px 13px, 
                 rgb(0 0 0 / 9%) 0px -3px 5px;
     transition: all ease 1.5s;
-}
-
-.btHn-cont-background:hover .btHn-cont-info {
-    bottom: 125px;
-    left: 5%;
 }
 
 .bao-tang-hn-container p {
@@ -1119,6 +1095,197 @@ footer p:hover {
 /* mobile responsive */
 
 @media only screen and (max-width:767px) {
+
+    .main-btn-content {
+        display: none;
+    }
+
+    .location-content {
+        width: 100%;
+    }
+
+    .location-title {
+        padding: 12px;
+        top: -33px;
+        left: 50%;
+    }
+
+    .location-title p {
+        font-size: 26px;
+    }
+
+    .content-slogan {
+        width: 50px;
+        top: 42px;
+        left: 93.4%;
+    }
+
+    .top-video img {
+        top: 102px;
+        left: 68%;
+    }
+
+    .top-video-content::after {
+        bottom: -26px;
+        left: -8px;
+        height: 31px;
+    }
+
+    .top-video-content::before {
+        width: 4%;
+        height: 6px;
+        left: -2.4%;
+        top: 94.9%;
+    }
+
+    .top-video .video-title {
+        bottom: -19px;
+    }
+
+    .top-video .video-title p {
+        font-size: 16px;
+    }
+
+    .top-video-content {
+        width: 80%;
+        height: 150px;
+        margin-bottom: 55px;
+        border-radius: 6px;
+    }
+
+    .top-video-content video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* hn old */
+
+    .location-content .main-content > div > img {
+        top: -20px;
+    }
+
+    .location-content .main-content-title > p {
+        font-size: 12px;
+        top: -17px;
+    }
+
+    .haNoi-old .title {
+        top: 55px;
+    }
+
+    .hn-sect-titl {
+        margin-top: 55px;
+    }
+
+    .hn-sect-titl h1 {
+        font-size: 28px;
+        transform: none;
+        margin-bottom: 32px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .haNoi-old .img:nth-child(3) {
+        left: -20%;
+        top: 170px;
+    }
+
+    .haNoi-old .img:nth-child(2) {
+        right: -15%;
+        top: 210px; 
+    }
+
+    .hn-sect-titl > p:nth-child(2) {
+        font-size: 12px;
+        transform: none;
+        width: 38%;
+        margin-top: 32px;
+    }
+
+    .hn-sect-titl > p:nth-child(3) {
+        font-size: 12px;
+        transform: none;
+        width: 80%;
+    }
+
+    .hn-old-social {
+        position: relative;
+        display: flex;
+    }
+
+    .hn-old-social img {
+        position: relative !important;
+        margin: 12px !important;
+        transform: none !important;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    .hn-old-img-1 {
+    width: 100%;
+    position: relative;
+    transform: none;
+    margin-bottom: 12px;
+    }
+
+/* bao tang hn */
+
+    .hn-new-title img {
+        top: -90px;
+        position: relative;
+    }
+
+    .haNoi-new > p {
+        font-size: 20px;
+        margin: 0 16px;
+        position: relative;
+        top: -98px;
+    }
+
+    .btHn-cont-background > p:nth-child(1) {
+        z-index: 99;
+        text-align: center;
+        font-size: 60px;
+        left: 50%;
+        bottom: 0;
+        top: -80px;
+        transform: translateX(-50%);
+    }
+
+    .btHn-cont-background {
+        overflow: visible;
+    }
+
+    .btHn-cont-info {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    .btHn-cont-background .inline {
+        width: 100%;
+    }
+
+    .btHn-cont-background .inline img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .btHn-cont-background > img {
+        display: none;
+    }
+
+    .bao-tang-hn-container p {
+        font-size: 9px;
+    }
+
+    .bao-tang-hn-text-night {
+        margin-bottom: 62px;
+    }
+
+/* footer */
     
     footer .text {
         height: auto;
@@ -1171,7 +1338,7 @@ footer p:hover {
     }
 
     .tag-footer-title p {
-        font-size: 35px;
+        font-size: 27px;
         text-shadow: 1px 1px 5px #333;
         margin-bottom: 60px;
     }
@@ -1273,7 +1440,95 @@ footer p:hover {
 
 /* tablet responsive */
 
-@media only screen and (min-width:767px) and (max-width:992px) {
+@media only screen and (min-width:768px) and (max-width:992px) {
+
+
+    .top-video-content {
+        height: 295px;
+    }
+
+    .top-video-content video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .location-content .main-content-title > p {
+        font-size: 26px;
+        top: -33px;
+    }
+
+    .location-content .main-content > div > img {
+        top: -38px;
+    }
+
+    /* hn old */
+
+    .hn-old-social img:nth-child(1) {
+        right: 14%;
+        top: 447px;
+    }
+
+    .hn-old-social img:nth-child(2) {
+        right: 1%;
+        top: 510px;
+    }
+
+    .hn-old-social img:nth-child(3) {
+        right: 16%;
+        top: 545px;
+    }
+
+    .hn-old-social img:nth-child(4) {
+        right: 2.8%;
+        top: 607px;
+    }
+
+    .hn-sect-titl > p:nth-child(3) {
+        width: 62%;
+    }
+
+    .haNoi-old .img:nth-child(3) {
+        top: 235px;
+    }
+
+    .haNoi-old .title {
+        top: 125px;
+    }
+
+    .hn-old-img-1 {
+        width: 90%;
+    }
+
+    /* bao tang hover */ 
+
+    .btHn-cont-background:hover .btHn-cont-info {
+        bottom: 125px;
+        left: 5%;
+    }
+
+    .btHn-cont-background:hover > img {
+        left: 0%;
+        top: -5.9%;
+        width: 120%;
+        transition: all ease-in-out 1s;
+    
+    }
+    
+    .btHn-cont-background:hover .inline img {
+        position: relative;
+        width: 120%;
+        top: -210px;
+    }
+    
+    .btHn-cont-background:hover .inline {
+        height: 250px;
+    }
+    
+    .btHn-cont-background:hover > p:nth-child(1) {
+        bottom: 435px;
+        left: 5%;
+    }
 
     /* tablet social icon */
 
@@ -1503,6 +1758,38 @@ footer p:hover {
 /* pc */
 
 @media only screen and (min-width:993px) {
+
+/* bao tang hover */
+
+
+
+    .btHn-cont-background:hover .btHn-cont-info {
+        bottom: 125px;
+        left: 5%;
+    }
+
+    .btHn-cont-background:hover > img {
+        left: 0%;
+        top: -5.9%;
+        width: 120%;
+        transition: all ease-in-out 1s;
+    
+    }
+    
+    .btHn-cont-background:hover .inline img {
+        position: relative;
+        width: 120%;
+        top: -210px;
+    }
+    
+    .btHn-cont-background:hover .inline {
+        height: 250px;
+    }
+    
+    .btHn-cont-background:hover > p:nth-child(1) {
+        bottom: 435px;
+        left: 5%;
+    }
 
 /* social icon */
 
