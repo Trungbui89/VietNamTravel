@@ -31,20 +31,43 @@ activeAoe.addEventListener("click", () => {
     var mapHeight = map.clientHeight;
     if(!secOpen) {
         secOpen = true
-        btn.classList.add('active')
-        activeAoe.style = `padding: 24px 80px; width: 60%; left: 45%; top: 61px;`
-        fontsize.style = `font-size: 90px`        
-        content.style = "height: auto; width:90%; overflow: visible"
-        wrapper.style = `height: auto`
+        btn.classList.add('active')     
+        content.style = "left:-150%;"
     } else {
         secOpen = false
         btn.classList.remove('active')
-        activeAoe.style = `padding: 5px 0; width: 9%; left: 28.1%; top: 151px;`
-        fontsize.style = `font-size: 12px`
-        content.style = `height: ${mapHeight}; width: 0; overflow: hidden`
-        wrapper.style = `height: ${mapHeight}`
+        content.style = `left:0;`
     }
 })
 
 // select location
 
+const locSelector = document.querySelectorAll(".location .location-icon")
+
+function showLocation() {
+    var mapHeight = map.clientHeight;
+    if(!secOpen) {
+        secOpen = true
+        btn.classList.add('active')      
+        content.style = `left: -150%;`
+    } else {
+        secOpen = false
+        btn.classList.remove('active')
+        content.style = `left:0;`
+    }
+    return false
+}
+
+for (var i = 0; i < locSelector.length; i++) {
+    let checker = []
+    locSelector[i].onclick = function(){
+        this.classList.forEach((value, i) => {
+            checker[i] = value;
+        }) 
+        if(checker.find((i) => i=="hn") != undefined){showLocation()}
+        else {
+            alert('Tag này đang được xây dựng, bạn đến thăm Hà Nội trước đi :>')
+        }
+    }
+
+}
