@@ -1,0 +1,166 @@
+@keyframes rolling {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+/* top img */
+
+.main-header-img {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-color: #db9e30;
+    overflow: hidden;
+}
+
+.main-header-img .img {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: 90%;
+    z-index: 0;
+}
+
+.main-header-img .img img {
+    width: 100%;
+    animation: rolling 100s linear infinite ;
+    display: block;
+}
+
+.main-header-img .img2 {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: 50%;
+    z-index: 1;
+}
+
+.main-header-img .img2 img {
+    width: 100%;
+    animation: rolling 100s linear infinite reverse;
+    display: block;
+}
+
+/* top text vs img*/
+
+.main-header .text {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-header .text p{
+    color: #fff;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.main-header .img3 {
+    position: absolute;
+    top: 475px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border: 1px solid #db9e30;
+    display: block;
+}
+
+.main-header .img3 img {
+    width: 100%;
+    display: block;
+    transition: ease .5s;
+}
+
+.main-header .khac-tuong-img,
+.main-header .khac-tuong-img-2 {
+    position: absolute;
+    z-index: 3;
+    width: 35%;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    overflow: hidden;
+    border: 1px solid #db9e30;
+    display: block;
+    transition: ease .5s;
+}
+
+.main-header .khac-tuong-img {
+    left: 24px;
+    top: 710px;
+}
+
+.main-header .khac-tuong-img-2 {
+    right: 24px;
+    top: 710px;
+}
+
+.main-header .khac-tuong-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-header .khac-tuong-img-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-header .khac-tuong-img:hover,
+.main-header .khac-tuong-img-2:hover,
+.main-header .img3:hover img{
+    transform: scale(1.1);
+    z-index: 99;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px){
+
+    .main-header-img {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        background-color: #db9e30;
+        overflow: hidden;
+    }
+
+    .main-header-img .img {
+        width: 170%;
+    }
+
+    .main-header-img .img2 {
+        width: 80%;
+    }
+
+    .main-header .text {
+        top: 35%;
+    }
+
+    .main-header .text p{
+        font-size: 60px;
+    }
+}
+
+/* tablet */
+
+@media only screen and (min-width:768px) and (max-width:993px){
+
+    .main-header .text {
+        top: 35%;
+    }
+}
