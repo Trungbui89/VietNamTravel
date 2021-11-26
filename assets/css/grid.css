@@ -25,6 +25,15 @@
     margin: 0 -1px;
 }
 
+.row-col-0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
 .col {
     padding-left: 15px;
     padding-right: 15px;
@@ -32,6 +41,10 @@
 
 .col-1 {
     padding: 2px 1px;
+}
+
+.col-0 {
+    padding: 0;
 }
 
 /* mobile */

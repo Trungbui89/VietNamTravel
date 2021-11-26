@@ -6,7 +6,21 @@
     }
 }
 
+@font-face {
+    font-family: 'arima';
+    src: url(../fonts/Arima\ Madurai\ ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Narziss";
+    src: url(../fonts/Narziss-Drops.ttf);
+}
+
 /* top img */
+
+.main-header {
+    position: relative;
+}
 
 .main-header-img {
     position: relative;
@@ -52,8 +66,8 @@
     position: absolute;
     z-index: 3;
     width: 100%;
-    text-align: center;
-    top: 50%;
+    text-align: center;  
+    top: 380px;
     transform: translateY(-50%);
 }
 
@@ -61,6 +75,10 @@
     color: #fff;
     font-size: 100px;
     text-transform: uppercase;
+}
+
+.top-slider > input {
+    display: none;
 }
 
 .main-header .img3 {
@@ -127,6 +145,371 @@
     z-index: 99;
 }
 
+/* section */
+
+section.top-video-container {
+    position: relative;
+    padding-top: 390px;
+    z-index: 1;    
+    padding-bottom: 120px;
+}
+
+.explore-btn{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: -120px;
+}
+
+.explore-btn div {
+    width: 30%;
+    background-color: #db9e30;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease .6s;
+}
+
+.explore-btn div:hover a{
+    transform: scale(1.3);
+}
+
+.explore-btn a{
+    font-family: 'arima';
+    font-size: 32px;
+    padding: 32px 6px;
+    color: #fff;
+    display: block;
+    transition: ease-in-out .8s;
+    
+}
+
+.section-title {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    
+}
+
+.section-title .title-img {
+    width: 10%;
+}
+
+.section-title .title-img img {
+    width: 100%;
+}
+
+.section-title p {
+    padding-top: 24px;
+    font-size: 42px;
+    color: #db9e30;
+    margin-bottom: 62px;
+}
+
+/* video tong quan */
+
+.video-tong-quan-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-tong-quan {
+    width: 80%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.22) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.22) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.27) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.19) 0px -3px 5px;
+}
+.video-tong-quan video {
+    width: 100%;
+    display: block;
+}
+
+section.top-video-container .hr {
+    position: relative;
+    bottom: 0;
+    width: 50%;
+    height: 1px;
+    background: #dba43f;
+    margin: 220px auto 0;
+}
+
+section.top-video-container .hr::before {
+    content: '';
+    top: -24px;
+    width: 120%;    
+    height: 1px;
+    background: #dba43f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.top-video-container .hr::after {
+    content: '';
+    top: 24px;
+    width: 80%;    
+    height: 1px;
+    background: #dba43f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* sectionbackground img */
+
+.section-bg-img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+}
+
+.section-bg-img .img-top,
+.section-bg-img .img-bot,
+.section-bg-img .img-center {
+    width: 100%;
+}
+
+.section-bg-img .img-top img,
+.section-bg-img .img-bot img,
+.section-bg-img .img-center img {
+    width: 100%;
+}
+
+.section-bg-img .img-top {
+    top: 235px;
+    left: -65%;
+    position: absolute;
+    opacity: .1;
+}
+
+.section-bg-img .img-center {
+    position: absolute;
+    opacity: .1;
+    top: 706px;
+    right: -58%;
+    width: 110%;
+}
+
+.section-bg-img .img-bot {
+    bottom: -645px;
+    right: -65%;
+    position: absolute;
+    opacity: .1;
+}
+
+/* grid chua tam chuc */
+
+.grid {
+    margin: 24px 0;
+}
+
+.chua-tam-chuc-intro .outside-border {
+    position: relative;
+    overflow: hidden; 
+    height: 350px;
+    z-index: 1;
+    box-shadow: rgb(0 0 0 / 35%) 0px 54px 55px, 
+                rgb(0 0 0 / 22%) 0px -12px 30px, 
+                rgb(0 0 0 / 22%) 0px 4px 6px, 
+                rgb(0 0 0 / 27%) 0px 12px 13px,
+                rgb(0 0 0 / 19%) 0px -3px 5px;
+}
+
+.chua-tam-chuc-intro .right-title,
+.chua-tam-chuc-intro .left-title {
+    align-self: center;
+    position: relative;
+}
+
+.chua-tam-chuc-intro .right-title > div,
+.chua-tam-chuc-intro .left-title > div {
+    backdrop-filter: blur(5px);
+    padding: 12px 24px;
+    z-index: 3;
+    position: relative;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 22px 70px 4px;
+    background-color: rgba(219, 158, 48, .05);
+}
+
+.chua-tam-chuc-intro .right-title > div {
+    left: -6.5%;
+}
+
+.chua-tam-chuc-intro .left-title > div {
+    right: -62%;
+}
+
+.chua-tam-chuc-intro .right-title p,
+.chua-tam-chuc-intro .left-title p {
+    display: block;
+    font-family: 'Narziss';
+    color: #d8af63;
+    font-size: 65px;
+}
+
+.text-container {
+    backdrop-filter: blur(5px);
+    padding: 12px 24px;
+    z-index: 3;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 22px 70px 4px;
+    background-color: rgba(219, 158, 48, .05);
+}
+
+.text-container p {
+    font-family: 'Raleway', sans-serif;
+    color: #e6c07b;
+    font-size: 28px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* dinh tam chuc */
+
+.dinh-tam-chuc-title img {
+    bottom: -205px;
+    position: absolute;
+    width: 100%;
+}
+
+.dinh-tam-chuc-text {
+    margin-top: 45px;
+    margin-bottom: 85px;
+}
+
+/* dien tam the */
+
+.dien-tam-the-title {
+    flex-direction: row-reverse;
+}
+
+.dien-tam-the-title img {    
+    top: -90px;
+    position: absolute;
+    width: 100%;
+}
+
+.dien-tam-the-text {
+    flex-direction: row-reverse;
+    margin-top: 45px;
+    margin-bottom: 85px;
+}
+
+/* dien phap chu */
+
+.dien-phap-chu-title .outside-border {
+    margin-left: 25%;
+    height: 650px;
+}
+
+.dien-phap-chu-title img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chua-tam-chuc-intro .right-title {
+    left: 1%;
+}
+
+.dien-phap-chu-text {
+    margin-top: 45px;
+    margin-bottom: 85px;
+}
+
+/* background img */
+
+.change-content-bg-img {
+    position: absolute;
+    top: 190px;
+    left: -55%;
+    width: 100%;
+}
+
+.change-content-bg-img2 {
+    position: absolute;
+    right: -10%;
+    top: 760px;
+    width: 60%;
+}
+
+.change-content-bg-img3 {
+    position: absolute;
+    bottom: 50px;
+    left: -5%;
+    width: 110%;
+}
+
+.change-content-bg-img img {
+    width: 100%;
+    opacity: .1;
+}
+
+.change-content-bg-img2 img {
+    width: 100%;
+    opacity: .1;  
+}
+
+.change-content-bg-img3 img {
+    width: 100%;
+    opacity: .1; 
+}
+
+/* dien quan am */
+
+.dien-quan-am-title img {
+    width: 100%;
+}
+
+.dien-quan-am-text {
+    margin-top: 45px;
+    margin-bottom: 85px;
+}
+
+/* chua ngoc */
+
+.chua-ngoc-title {
+    flex-direction: row-reverse;
+}
+
+.chua-tam-chuc-intro .left-title > div {
+    right: -48%;
+}
+
+.chua-ngoc-title img {
+    width: 100%;
+    bottom: -137px;
+    position: absolute;
+}
+
+.chua-ngọc-text {
+    margin-top: 45px;
+    margin-bottom: 85px;
+    flex-direction: row-reverse;
+}
+
 /* mobile */
 
 @media only screen and (max-width: 767px){
@@ -148,11 +531,123 @@
     }
 
     .main-header .text {
-        top: 35%;
+        top: 275px;
     }
 
     .main-header .text p{
         font-size: 60px;
+    }
+
+    /* mobile silder */
+
+    .top-slider {
+        position: relative;
+        width: 300%;
+        height: auto;
+        display: flex;
+        top: -220px;
+
+    }
+
+    .top-slider > div.img3,
+    .top-slider > div.khac-tuong-img,
+    .top-slider > div.khac-tuong-img-2{
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        padding: 0 32px;
+        transition: ease 1s;
+    }
+
+    .top-slider .khac-tuong-img {
+        left: 0;
+        top: 0;
+        width: calc(100% / 3);
+    }
+    
+    .top-slider .khac-tuong-img-2 {
+        right: 0;
+        top: 0;
+        width: calc(100% / 3);
+    }
+    
+    .top-slider .img3 {
+        transform: none;
+        left: 0;
+        top: 0;
+        width: calc(100% / 3);
+    }
+
+    .img3 div {
+        border-radius: 9px;
+        border: 1px solid #db9e30;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .khac-tuong-img div{
+        border-radius: 9px;
+        border: 1px solid #db9e30;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .khac-tuong-img-2 div{
+        border-radius: 9px;
+        border: 1px solid #db9e30;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slider-manual {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 6;
+        bottom: 155px;
+    }
+
+    .slider-manual label {
+        width: 10%;
+        height: 12px;
+        border: 1px solid #db9e30;
+        margin: 0 9px;
+    }
+
+    .manual-btn:hover{
+        background: #db9e30;
+    }
+
+    .top-slider #radio1:checked ~ div.first {
+        margin-left: 0;
+    }
+    
+    .top-slider #radio2:checked ~ div.first{
+        margin-left: calc(-100% / 3);
+    }
+    
+    .top-slider #radio3:checked ~ div.first{
+        margin-left: calc(-100% / 3 * 2);
+    }
+
+    section.top-video-container {
+        padding-top: 70px;
+    }
+
+    /* mobile section top video */
+
+    .section-title {
+        margin-top: 30px;
+    }
+
+    .section-title p {
+        font-size: 26px;
+    }
+
+    .video-tong-quan {
+        width: 90%;
     }
 }
 
@@ -160,7 +655,32 @@
 
 @media only screen and (min-width:768px) and (max-width:993px){
 
-    .main-header .text {
-        top: 35%;
+    .main-header .text {       
+    top: 275px;
+    }
+
+    section.top-video-container {
+        padding-top: 200px;
+    }
+
+    .explore-btn {
+        top: -10px;
+    }
+
+    .section-title {
+        margin-top: 100px;
+    }
+
+    .video-tong-quan {
+        width: 90%;
+    }
+}
+
+/* pc */
+
+@media only screen and (min-width:993px) {
+
+    .explore-btn {
+        top: 30px;
     }
 }
