@@ -1,8 +1,24 @@
+@font-face {
+    font-family: "Narziss-Drops";
+    src: url(../fonts/Narziss-Drops.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .main-header {
     position: relative;
     width: 100%;
     height: 800px;
-    overflow: hidden;
+    z-index: 1;
 }
 
 .main-header img {
@@ -10,4 +26,193 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
+}
+
+/* main container */
+
+.main-container {
+    position: relative;
+    width: 100%;
+}
+
+.container-bg {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+}
+
+.container-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-container .content {
+    padding: 12px;
+    margin: 0 8%;
+    background-color: #fff;
+    position: relative;
+}
+
+.content h1 {
+    color: #db9e30;
+    font-size: 36px;
+    width: 60%;
+    display: block;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.content h2 {
+    color: #db9e30;
+    font-size: 32px;
+    width: 60%;
+    display: block;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.content p {
+    font-size: 24px;
+    width: 80%;
+    display: block;
+    margin: 60px auto;
+    text-align: left;
+}
+
+.content em {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+ul li {
+    font-size: 21px;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    list-style-type: disc;
+}
+
+.content strong {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.content .img {
+    width: 60%;
+    position: relative;
+    margin: 24px auto;
+}
+
+.content .img img {
+    width: 100%;
+}
+
+/* cards */
+
+.thong-tin-them {
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.card {
+    margin-top: 24px;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-container {
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card .img {
+    width: 100%;
+    height: 160px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.card .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease .6s;
+}
+
+.card .text {
+    margin-top: 18px;
+    width: 100%;
+    height: 200px;
+}
+
+.card .text h3 {
+    color: #db9e30;
+    padding: 12px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Narziss-Drops', sans-serif;
+
+}
+
+.card .text p {
+    font-size: 20px;
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    font-family: 'Narziss-Drops', sans-serif;
+}
+
+footer{
+    margin-top: 36px;
+    padding-top: 12px;
+}
+
+/* mobile */
+
+@media only screen and (max-width:767px) {
+    
+    .content h1 {
+        font-size: 28px;
+        width: 60%;
+    }
+    
+    .content h2 {
+        font-size: 24px;
+    }
+    
+    .content p {
+        font-size: 18px;
+    }
+
+    em {
+        font-size: 12px;
+    }
+    
+    ul li {
+        font-size: 16px;
+    }
+    
+    .content strong {
+        font-size: 20px;
+    }
+
+    .content > .img {
+        width: calc(100% + 24px);
+        margin: 24px -12px;
+    }
+
+    .col {
+        padding: 0;
+    }
+
 }
