@@ -16,6 +16,10 @@
     src: url(../fonts/Narziss-Drops.ttf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* top img */
 
 .main-header {
@@ -182,6 +186,7 @@ section.top-video-container {
     color: #fff;
     display: block;
     transition: ease-in-out .8s;
+    text-decoration: none;
     
 }
 
@@ -231,6 +236,7 @@ section.top-video-container {
     rgba(0, 0, 0, 0.27) 0px 12px 13px, 
     rgba(0, 0, 0, 0.19) 0px -3px 5px;
 }
+
 .video-tong-quan video {
     width: 100%;
     display: block;
@@ -312,7 +318,7 @@ section.top-video-container .hr::after {
 
 /* grid chua tam chuc */
 
-.grid {
+.chua-tam-chuc-intro .grid {
     margin: 24px 0;
 }
 
@@ -388,9 +394,10 @@ section.top-video-container .hr::after {
 /* dinh tam chuc */
 
 .dinh-tam-chuc-title img {
-    bottom: -205px;
-    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .dinh-tam-chuc-text {
@@ -405,9 +412,10 @@ section.top-video-container .hr::after {
 }
 
 .dien-tam-the-title img {    
-    top: -90px;
-    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .dien-tam-the-text {
@@ -424,10 +432,10 @@ section.top-video-container .hr::after {
 }
 
 .dien-phap-chu-title img {
+    width: 100%;
     height: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .chua-tam-chuc-intro .right-title {
@@ -457,7 +465,7 @@ section.top-video-container .hr::after {
 
 .change-content-bg-img3 {
     position: absolute;
-    bottom: 50px;
+    bottom: 200px;
     left: -5%;
     width: 110%;
 }
@@ -481,6 +489,9 @@ section.top-video-container .hr::after {
 
 .dien-quan-am-title img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
 }
 
 .dien-quan-am-text {
@@ -500,8 +511,9 @@ section.top-video-container .hr::after {
 
 .chua-ngoc-title img {
     width: 100%;
-    bottom: -137px;
-    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .chua-ngọc-text {
@@ -509,6 +521,159 @@ section.top-video-container .hr::after {
     margin-bottom: 85px;
     flex-direction: row-reverse;
 }
+
+.bottom-img {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    position: relative;
+}
+
+.bottom-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* dang ky section */
+
+section#dang-ky {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: url("../image/vanHoaPage/fc7bbd95fd18280ca035f0afbeeaecff.jpg") center center/cover no-repeat;
+    padding-top: 3.9%;
+}
+
+.dang-ky-bg {
+    position: absolute;
+    width: 112%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(26,26,26,.3) 0%, rgba(26,26,26,.6) 90%, rgba(26,26,26,.6) 100%);
+    z-index: 1;
+    margin-top: -9%;
+    margin-left: -6%;
+    margin-right: -6%;
+}
+
+#dang-ky > p {
+    font-size: 55px;
+    font-family: 'arima', sans-serif;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    text-shadow: 1px 1px 3px #3c3c3c;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.dang-ky-container {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.dang-ky-content {
+    padding: 34px 26px;
+}
+
+.dang-ky-border {
+    background-color: rgba(219,158,48,.1);
+    backdrop-filter: blur(3px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.dang-ky-container p,
+.dang-ky-container h3 {
+    color: #fff;
+}
+
+.dang-ky-container h3 {
+    padding: 12px;
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.dang-ky-container p {
+    padding: 12px;
+}
+
+.form-dang-ky {
+    position: relative;
+}
+
+.form-bg {
+    width: 100%;
+    position: relative;
+}
+
+.form-bg img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: fill;
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: 65px;
+
+}
+
+.form-container label {
+    color: #db9e30;
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    margin: 0 12px;
+}
+
+.form-container input[type=text], select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 12px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+
+.form-container option {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form-container input[type=submit] {
+    width: 90%;
+    padding: 12px 20px;
+    display: block;
+    margin: 34px 12px;
+    background-color: #db9e30;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    transition: ease 1s;
+}
+
+.form-container input[type=submit]:hover {
+    background-color: #cc8c15;
+}
+
+footer {
+    margin-top: 120px;
+}
+
 
 /* mobile */
 
@@ -636,10 +801,14 @@ section.top-video-container .hr::after {
         padding-top: 70px;
     }
 
+    section.top-video-container .hr {
+        margin: 100px auto 0;
+    }
+
     /* mobile section top video */
 
     .section-title {
-        margin-top: 30px;
+        margin-top: 0;
     }
 
     .section-title p {
@@ -649,6 +818,89 @@ section.top-video-container .hr::after {
     .video-tong-quan {
         width: 90%;
     }
+
+    /* mobile grid */
+
+    .grid {
+        justify-content: center;
+    };
+
+    .chua-tam-chuc-intro .outside-border {
+        border-radius: 9px;
+    }
+
+    .chua-tam-chuc-intro .right-title,
+    .chua-tam-chuc-intro .left-title {
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .chua-tam-chuc-intro .right-title > div, 
+    .chua-tam-chuc-intro .left-title > div {
+        left: 0;
+        right: 0;
+        bottom: 16px;
+    }
+
+    .chua-tam-chuc-intro .right-title p, 
+    .chua-tam-chuc-intro .left-title p {
+        font-size: 32px;
+    }
+
+    .dinh-tam-chuc-text,
+    .dien-tam-the-text,
+    .dien-phap-chu-text,
+    .dien-quan-am-text,
+    .chua-ngọc-text {
+        margin-top: 30px;
+        margin-bottom: 85px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+    }
+
+    .dien-phap-chu-title .outside-border {
+        margin-left: 0;
+    }
+
+    /* tablet dang ky content */
+
+    .form-container{
+        margin-top: 32px;
+    }
+
+    .form-container label {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+    
+    .form-container input[type=text], select {
+        width: 90%;
+        padding: 8px 16px;
+        margin: 8px 16px;
+        font-size: 10px;
+    }
+    
+    .form-container input[type=submit] {
+        width: 90%;
+        padding: 8px 16px;
+        display: block;
+        margin: 28px 10px;
+        font-size: 16px;
+    }
+
+    .dang-ky-container h3 {
+        padding: 12px;
+        font-size: 21px;
+    }
+    
+    .dang-ky-container p {
+        padding: 10px;
+    }
+
 }
 
 /* tablet */
@@ -674,6 +926,38 @@ section.top-video-container .hr::after {
     .video-tong-quan {
         width: 90%;
     }
+
+    /* tablet dang ky content */
+
+    .form-container label {
+        font-size: 26px;
+        margin: 0 8px;
+    }
+    
+    .form-container input[type=text], select {
+        width: 90%;
+        padding: 8px 16px;
+        margin: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .form-container input[type=submit] {
+        width: 90%;
+        padding: 8px 16px;
+        display: block;
+        margin: 28px 10px;
+        font-size: 18px;
+    }
+
+    .dang-ky-container h3 {
+        padding: 12px;
+        font-size: 21px;
+    }
+    
+    .dang-ky-container p {
+        padding: 10px;
+    }
+
 }
 
 /* pc */
@@ -682,5 +966,14 @@ section.top-video-container .hr::after {
 
     .explore-btn {
         top: 30px;
+    }
+
+    .dinh-tam-chuc-title img {
+        bottom: 50%;
+        transform: translateY(50%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
