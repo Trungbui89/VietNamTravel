@@ -20,6 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#wrapper {
+    background-color: #1a1a1a;
+}
+
 /* top img */
 
 .main-header {

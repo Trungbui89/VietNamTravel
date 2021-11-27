@@ -1285,6 +1285,23 @@ footer p:hover {
         margin-bottom: 62px;
     }
 
+    .tag-footer-gallery div.col-1 img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .tag-footer-gallery div.col-1{
+        height: 180px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .tag-footer-title p {
+        font-size: 27px;
+        text-shadow: 1px 1px 5px #333;
+        margin-bottom: 60px;
+    }
+
 /* footer */
     
     footer .text {
@@ -1324,23 +1341,6 @@ footer p:hover {
 
     .anh-nen-2 {
         left: 10%;
-    }
-
-    .tag-footer-gallery div.col-1 img{
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .tag-footer-gallery div.col-1{
-        height: 180px;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .tag-footer-title p {
-        font-size: 27px;
-        text-shadow: 1px 1px 5px #333;
-        margin-bottom: 60px;
     }
 
     /* mobile social icon */
