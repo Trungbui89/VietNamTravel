@@ -47,7 +47,7 @@ section .text div {
 }
 
 section .text p {
-    font-size: 24px;
+    font-size: 23px;
     font-family: 'Raleway', sans-serif;
     text-align: left;
 }
@@ -73,6 +73,10 @@ section .text p {
     text-transform: capitalize;
 }
 
+.img-gold-container .tho p {
+    font-size: 20px;
+}
+
 .img-gold-container p.end-text {
     font-size: 75px;
 }
@@ -89,4 +93,61 @@ section .text p {
 
 .h-l-600 {
     height: 600px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 767px){
+    
+    .img-gold-container .tho p {
+        font-size: 21px;
+        line-height: 1.5;
+    }
+
+}
+
+/* tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 993px){
+    
+    .img-gold-container .tho p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .img-gold-container > div:nth-child(3) {
+        order: 2;
+    }
+
+    .img-gold-container > div:nth-child(4) {
+        order: 1;
+    }
+
+    .img-gold-container > div:nth-child(4) .row-col-0{
+        flex-direction: row;
+    }
+
+    .img-gold-container > div:nth-child(4) .text {
+        order: 2;
+    }
+
+    .img-gold-container > div:nth-child(4) .img {
+        order: 1;
+    }
+
+    .img-gold-container > div:nth-child(4) .h-l-600 {
+        height: 288px;
+    }
+
+}
+
+/* pc */
+
+@media only screen and (min-width: 994px) {
+
+    .img-gold-container .tho p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
 }
