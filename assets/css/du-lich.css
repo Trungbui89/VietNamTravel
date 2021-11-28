@@ -66,6 +66,10 @@
     src: url('../fonts/ATURDIDA.ttf');
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .pin {
     width: 30px;
     height: 30px;

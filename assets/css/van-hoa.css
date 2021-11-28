@@ -16,6 +16,11 @@
     src: url(../fonts/Narziss-Drops.ttf);
 }
 
+@font-face {
+    font-family: 'Celestia';
+    src: url(../fonts/Celestia.otf);
+}
+
 html {
     scroll-behavior: smooth;
 }
