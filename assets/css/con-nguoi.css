@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+section {
+    margin: 120px 12px;
+}
+
+section .img,
+section .text,
+section .img-2-row  {
+    margin-top: 24px;
+}
+
+section .img:hover img {
+    transform: scale(1.2);
+}
+
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: all ease 3s;
+}
+
+section .img div {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+    overflow: hidden;
+}
+
+section .text div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+section .text p {
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+
+.img-2-row .row-col-0 {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-2-row .text,
+.img-2-row .img {
+    margin: 0;
+    padding: 0;
+}
+
+.img-2-row .text > div {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-2-row .text p {
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.img-gold-container p.end-text {
+    font-size: 75px;
+}
+
+/* height */
+
+.h-l-250 {
+    height: 250px;
+}
+
+.h-l-288 {
+    height: 288px;
+}
+
+.h-l-600 {
+    height: 600px;
+}
