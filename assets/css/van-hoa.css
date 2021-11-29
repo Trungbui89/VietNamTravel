@@ -352,6 +352,7 @@ section.top-video-container .hr::after {
 .chua-tam-chuc-intro .right-title > div,
 .chua-tam-chuc-intro .left-title > div {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 12px 24px;
     z-index: 3;
     position: relative;
@@ -382,6 +383,7 @@ section.top-video-container .hr::after {
 
 .text-container {
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 12px 24px;
     z-index: 3;
     position: relative;
@@ -594,6 +596,7 @@ section#dang-ky {
 .dang-ky-border {
     background-color: rgba(219,158,48,.1);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
 }

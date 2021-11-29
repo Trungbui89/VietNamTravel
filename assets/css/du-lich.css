@@ -778,6 +778,7 @@ section {
     border-radius: 5px;
     position: absolute;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     background-color: rgba(242, 185, 12, 0.1);
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, 
                 rgb(0 0 0 / 12%) 0px -12px 30px, 
