@@ -1101,6 +1101,10 @@ footer p:hover {
 
 @media only screen and (max-width:767px) {
 
+    .map {
+        margin-top: 75px;
+    }
+
     .main-btn-content {
         display: none;
     }
