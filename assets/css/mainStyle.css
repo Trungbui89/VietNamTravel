@@ -43,7 +43,7 @@ scrollbar-width: none;  /* Firefox */
 }
 
 header {
-    z-index: 12;
+    z-index: 99;
     position: absolute;
     top: 0;
     left: 0;
@@ -73,6 +73,7 @@ header a {
 
 header nav {
     display: none;
+    z-index: 99;
 }
 
 header nav .nav-items a {
